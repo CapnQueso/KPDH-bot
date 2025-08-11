@@ -18,9 +18,9 @@ function formatHMS(seconds) {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName('rumi')
-    .setDescription('Get a random Rumi quote from kpop.txt')
-	.setContexts(0, 1, 2), // 0 = guild, 1 = bot DMs, 2 = user DMs
+    .setName('zoey')
+    .setDescription('Get a random Zoey quote from kpop.txt')
+    .setContexts(0, 1, 2), // 0 = guild, 1 = bot DMs, 2 = user DMs
 
   async execute(interaction) {
     try {
@@ -35,18 +35,18 @@ module.exports = {
       const content = await fs.readFile(filePath, 'utf-8');
       const lines = content.split('\n');
 
-      // Filter rumi lines and store their indices
-      const rumiLines = lines
+      // Filter Zoey lines and store their indices
+      const zoeyLines = lines
         .map((line, idx) => ({ line, idx }))
-        .filter(obj => obj.line.startsWith('Rumi:'));
+        .filter(obj => obj.line.startsWith('Zoey:'));
 
-      if (rumiLines.length === 0) {
-        await interaction.reply('No Rumi quotes found in the transcript!');
+      if (zoeyLines.length === 0) {
+        await interaction.reply('No Zoey quotes found in the transcript!');
         return;
       }
 
       // Pick a random quote
-      const randomEntry = rumiLines[Math.floor(Math.random() * rumiLines.length)];
+      const randomEntry = zoeyLines[Math.floor(Math.random() * zoeyLines.length)];
 
       // Calculate timestamp (in seconds) and format it
       const timestampSeconds = Math.floor((randomEntry.idx / lines.length) * totalSeconds);
@@ -56,15 +56,15 @@ module.exports = {
       const timestampFormatted = formatHMS(timestampSeconds);
 
 
-      // Clean quote text (remove "rumi: " prefix)
-      const quoteText = randomEntry.line.replace(/^Rumi:\s*/, '');
+      // Clean quote text (remove "Zoey: " prefix)
+      const quoteText = randomEntry.line.replace(/^Zoey:\s*/, '');
 
       // Reply with quote + timestamp
-      await interaction.reply(`**Rumi:** "${quoteText}" Timestamp: ${timestampFormatted}`);
+      await interaction.reply(`**Zoey:** "${quoteText}" Timestamp: ${timestampFormatted}`);
 
     } catch (error) {
       console.error(error);
-      await interaction.reply('Oops, something went wrong fetching Rumi quotes.');
+      await interaction.reply('Oops, something went wrong fetching Zoey quotes.');
     }
   },
 };
