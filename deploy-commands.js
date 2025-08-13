@@ -24,6 +24,7 @@ const commands = [];
 for (const file of commandFiles) {
   const command = require(file);
   if ('data' in command && 'execute' in command) {
+    console.log(`Registering: ${command.data.name}`);
     const json = command.data.toJSON();
     json.dm_permission = true; // allow in DMs
     commands.push(json);
