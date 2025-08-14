@@ -1,1 +1,4 @@
+**INSTALL LINK** https://discord.com/oauth2/authorize?client_id=1403277317396103233
+note: the stats doesnt live update on the github but running the stat command will pull up the live number
+kpop demon hunters bot as a coding project, more things to be added, @capnqueso on discord if anything breaks
 kpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunterskpop demon hunters
