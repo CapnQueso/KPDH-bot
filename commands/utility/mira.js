@@ -19,7 +19,7 @@ function formatHMS(seconds) {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName('mira')
-    .setDescription('Get a random Mira quote from kpop.txt')
+    .setDescription('Get a random Mira quote from the kpop demon hunters transcript')
     .setContexts(0, 1, 2), // 0 = guild, 1 = bot DMs, 2 = user DMs
 
 
@@ -31,7 +31,6 @@ module.exports = {
 
       // Read file as lines
       const filePath = path.join(__dirname, '../../kpop.txt'); 
-      // Adjust the path if needed — this assumes kpop.txt is 2 folders up from 'utility' folder
 
       const content = await fs.readFile(filePath, 'utf-8');
       const lines = content.split('\n');
