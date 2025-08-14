@@ -59,7 +59,7 @@ module.exports = {
     let truncated = false;
 
     for (const l of lines) {
-      if (preview.length + l.length + 1 > 1990) {
+      if (preview.length + l.length + 1 > 1900) {
         truncated = true;
         break;
       }
